@@ -17,7 +17,7 @@ npm init -f -y
 ```
 
 ```
-serverless create --template aws-nodejs --name serverless-lambda-1
+serverless create --template aws-nodejs --name metal-as-a-service
 ```
 
 ```

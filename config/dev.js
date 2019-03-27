@@ -5,7 +5,7 @@ function config() {
   const env = "dev";
   const resourcesEnv = env.substring(0, 3);
 
-  const serviceName = `serverless-lambda-1`;
+  const serviceName = `metal-as-a-service`;
 
   return {
     env,

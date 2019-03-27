@@ -75,19 +75,19 @@ npm install --save lodash
 - DEV
 
 ```
-aws cloudformation create-stack --stack-name serverless-lambda-1-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=serverless-lambda-1 ParameterKey=Stage,ParameterValue=dev
+aws cloudformation create-stack --stack-name metal-as-a-service-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=metal-as-a-service ParameterKey=Stage,ParameterValue=dev
 ```
 
 - HML
 
 ```
-aws cloudformation create-stack --stack-name serverless-lambda-1-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=serverless-lambda-1 ParameterKey=Stage,ParameterValue=dev
+aws cloudformation create-stack --stack-name metal-as-a-service-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=metal-as-a-service ParameterKey=Stage,ParameterValue=dev
 ```
 
 - PRD
 
 ```
-aws cloudformation create-stack --stack-name serverless-lambda-1-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=serverless-lambda-1 ParameterKey=Stage,ParameterValue=prd
+aws cloudformation create-stack --stack-name metal-as-a-service-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=metal-as-a-service ParameterKey=Stage,ParameterValue=prd
 ```
 
 ### Update
@@ -95,24 +95,24 @@ aws cloudformation create-stack --stack-name serverless-lambda-1-resources --tem
 - DEV
 
 ```
-aws cloudformation update-stack --stack-name serverless-lambda-1-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=serverless-lambda-1 ParameterKey=Stage,ParameterValue=dev
+aws cloudformation update-stack --stack-name metal-as-a-service-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=metal-as-a-service ParameterKey=Stage,ParameterValue=dev
 ```
 
 - HML
 
 ```
-aws cloudformation update-stack --stack-name serverless-lambda-1-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=serverless-lambda-1 ParameterKey=Stage,ParameterValue=dev
+aws cloudformation update-stack --stack-name metal-as-a-service-resources --template-body file://infra/resources-cloud-formation.yml --parameters ParameterKey=Project,ParameterValue=metal-as-a-service ParameterKey=Stage,ParameterValue=dev
 ```
 
 - PRD
 
 ````
-aws cloudformation update-stack --stack-name serverless-lambda-1-resources --template-body file://infra/resources-cloud-formation.yml --parameters ```
-ParameterKey=Project,ParameterValue=serverless-lambda-1 ParameterKey=Stage,ParameterValue=prd
+aws cloudformation update-stack --stack-name metal-as-a-service-resources --template-body file://infra/resources-cloud-formation.yml --parameters ```
+ParameterKey=Project,ParameterValue=metal-as-a-service ParameterKey=Stage,ParameterValue=prd
 ````
 
 ### Cleanup
 
 ```
-aws cloudformation delete-stack --stack-name serverless-lambda-1-resources
+aws cloudformation delete-stack --stack-name metal-as-a-service-resources
 ```

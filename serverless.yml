@@ -1,4 +1,4 @@
-service: serverless-lambda-1
+service: metal-as-a-service
 
 custom:
   config: ${file(./config/${opt:stage}.js):config}
@@ -10,15 +10,6 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: ${opt:stage, 'dev'}
-  # stageForResources:
-  #   !If [
-  #     !Or [
-  #       !Equals [!Ref provider.stage, "prd-blue"],
-  #       !Equals [!Ref provider.stage, "prd-green"],
-  #     ],
-  #     prd,
-  #     !Ref provider.stage,
-  #   ]
   stackName: ${self:service}-${self:provider.stage}
   apiKeys:
     - ${opt:stage}-${self:service}-apikey
@@ -33,33 +24,15 @@ package:
 
 plugins:
   - serverless-plugin-browserifier
-  - serverless-plugin-warmup # Keeping Functions Warm - https://serverless.com/blog/keep-your-lambdas-warm/
-  # - serverless-content-encoding
-  # - serverless-step-functions
+  - serverless-plugin-warmup
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          path: v1/hello
-          method: get
-  account-get:
-    handler: src/functions/account/get.handler
+  bands-get:
+    handler: src/functions/bands/get.handler
     warmup: true
     events:
       - http:
-          path: v1/account/{accountId}
+          path: v1/bands
           method: get
           cors: true
-          private: true
-  account-insert:
-    handler: src/functions/account/insert.handler
-    events:
-      - http:
-          path: v1/account
-          method: post
-          cors: true
-          private: true
-# .
-# resources: ${file(./infra/resources.yml)} # You use that or can manage resources out of the solution by using the ./infra/resources-cloud-formation.yml file in CloudFormation.
+          private: false
