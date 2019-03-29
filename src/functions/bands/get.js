@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-const getBand =  require("metal-band-generator").default;
-console.log(getBand);
+const getBand = require('metal-band-generator').default;
+
 module.exports.handler = async (event, context) => ({
   statusCode: 200,
   headers: {

@@ -15,7 +15,8 @@ provider:
     - ${opt:stage}-${self:service}-apikey
   environment:
     NODE_ENV: ${opt:stage}
-    ENV_VAR_1: ${self:custom.config.envVar1}
+    FB_ACCESS_TOKEN: ${env:FB_ACCESS_TOKEN}
+    FB_PAGE_ID: ${env.FB_PAGE_ID}
   iamRoleStatements: ${file(./infra/iam-role-statements.yml)}
 
 package:
@@ -25,6 +26,7 @@ package:
 plugins:
   - serverless-plugin-browserifier
   - serverless-plugin-warmup
+  - serverless-dotenv-plugin
 
 functions:
   bands-get:
@@ -36,3 +38,8 @@ functions:
           method: get
           cors: true
           private: false
+  fb-post:
+    handler: src/functions/bands/fb-post.handler
+    warmup: true
+    events:
+      - schedule: cron(0 * * * * *)
