@@ -22,7 +22,7 @@
   "dependencies": {
     "aws-sdk": "^2.489.0",
     "config": "^3.1.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "metal-band-generator": "^0.4.0",
     "serverless-plugin-warmup": "^4.4.3-rc.1",
     "uuid": "^3.3.2"
