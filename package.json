@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/vspedr/metal-as-a-service#readme",
   "dependencies": {
-    "aws-sdk": "^2.489.0",
+    "aws-sdk": "^2.490.0",
     "config": "^3.1.0",
     "lodash": "^4.17.11",
     "metal-band-generator": "^0.4.0",
