@@ -25,7 +25,7 @@
     "lodash": "^4.17.15",
     "metal-band-generator": "^0.4.0",
     "serverless-plugin-warmup": "^4.4.3-rc.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "browserify": "^16.5.0",
